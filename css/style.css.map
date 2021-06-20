@@ -1,0 +1,16 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,IAAI,CAAC;EACD,gBAAgB,ECHZ,IAAI;EDIR,KAAK,EAAE,KAAK;EACZ,UAAU,EAAE,KAAK;CAAG;;AACxB,AAAA,IAAI,CAAC;EACD,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CAAG",
+    "sources": [
+        "../sass/style.sass",
+        "../sass/_variables.sass",
+        "../sass/_mixins.sass",
+        "../sass/_baner.sass",
+        "../sass/_article.sass",
+        "../sass/_aside.sass",
+        "../sass/_projects.sass",
+        "../sass/_footer.sass"
+    ],
+    "names": [],
+    "file": "style.css"
+}

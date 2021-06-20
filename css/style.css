@@ -1,0 +1,13 @@
+html {
+  background-color: #000;
+  width: 100vw;
+  min-height: 200vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*# sourceMappingURL=style.css.map */
