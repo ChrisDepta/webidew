@@ -1,0 +1,40 @@
+.nav
+    position: fixed
+    z-index: 1
+    top: 0
+    left: 0
+    width: 100vw
+    height: $nav-height-mobile
+    font-size: 2rem
+    display: flex
+    transition: .4s linear
+    &__title
+        flex-basis: 50%
+        flex-grow: 1
+        text-align: right
+        margin-right: 2%
+        line-height: $nav-height-mobile
+        transition: .4s linear
+    .nav__logo
+        flex-basis: 15%
+        display: flex
+        &__img
+            align-self: center
+            display: block
+            height: 70%
+    .nav__time
+        flex-basis: 15%
+        text-align: right
+        margin-right: 2%
+        line-height: $nav-height-mobile
+        transition: .4s linear
+.nav.active
+    color: $white
+.active .nav
+    &__title
+        transform: scale(1.5)
+        margin-top: 4%
+    &__logo
+        opacity: 0
+    &__time
+        opacity: 0

@@ -1,16 +1,19 @@
 .burger
     position: fixed
+    z-index: 2
     top: 2vh
     left: 2vh
     width: 12vw
     height: 10vw
-    background-color: red
     cursor: pointer
+    transition: .2s
     span
         position: absolute
         height: 2vw
         width: 100%
         background-color: #fff
+        border-radius: 1vw
+        transition: top .2s .2s, bottom .2s .2s, transform .2s .4s
     &__spn1
         top: 0
     &__spn2
@@ -18,4 +21,13 @@
     &__spn3
         bottom: 0
 .burger.active
-    
+    transform: rotate(90deg)
+.active .burger
+    &__spn1
+        top: calc(50% - 1vw)
+        transform: rotate(45deg)
+    &__spn2
+        opacity: 0
+    &__spn3
+        bottom: calc(50% - 1vw)
+        transform: rotate(-45deg)

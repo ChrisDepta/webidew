@@ -1,15 +1,36 @@
 @import 'variables'
 @import 'mixins'
+// Lato
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap')
+// Cabin
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400&display=swap')
 
 html
     background-color: $black
-    width: 100vw
-    min-height: 200vh
+    font-family: "Lato", sans-serif
+    font-size: $font-size
 body
     margin: 0
     padding: 0
     box-sizing: border-box
+.sideWrap
+    overflow-x: hidden
+.wrap
+    // general settings
+    background-color: $beige1
+    width: 100vw
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    transform: translate(0,0)
+    transition: .6s linear
+    
+.wrap.active
+    transform: translate(100%, 10%)
 
+@import 'burger'
+@import 'nav'  
+@import 'menu'
 @import 'baner'
 @import 'article'
 @import 'aside'
