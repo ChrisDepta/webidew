@@ -12,7 +12,6 @@
     line-height: 170%
     letter-spacing: 4px
     list-style: none
-    cursor: pointer
     color: $white
     transition: .6s linear
     display: flex
@@ -26,7 +25,8 @@
                 
                 transform: translateY(100%)
                 transition: .7s 0.6s ease-out
-                a
+                a   
+                    cursor: pointer
                     position: relative
                     text-decoration: none
                     color: $white
@@ -37,23 +37,18 @@
                         position: relative
                         float: right
                         width: 0
-                        height: 3px
+                        height: 2px
                         display: block
                         margin-top: 5px
                         right: 0
                         background-color: $white
-                        transition: width .4s
-                a 
-                    span.active
+                        transition: width .2s
+                a:hover 
+                    span
                         float: left
                         left: 0
                         width: 100%
                         background-color: $white
-                // a 
-                //     span.removeActive
-                //         left: initial
-                //         right: 0
-                //         width: 100%
     &__copy
         flex-basis: 100%
         text-align: right
@@ -81,3 +76,4 @@
         div 
             p
                 transform: translateY(0)
++menuMobileHorizontal

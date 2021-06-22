@@ -3,31 +3,36 @@
     z-index: 2
     top: 2vh
     left: 2vh
-    width: 12vw
-    height: 10vw
+    width: calc(#{$nav-height-mobile}/2 + 2vh)
+    height: calc(#{$nav-height-mobile}/2)
     cursor: pointer
     transition: .2s
     span
         position: absolute
-        height: 2vw
+        height: 20%
         width: 100%
-        background-color: #fff
-        border-radius: 1vw
-        transition: top .2s .2s, bottom .2s .2s, transform .2s .4s
+        background-color: $black
+        border-radius: 3vh
+        transition: top .2s .2s, bottom .2s .2s, transform .2s .4s, background-color 1.5s
     &__spn1
         top: 0
     &__spn2
-        top: calc(50% - 1vw)
+        top: calc(50% - 10%)
     &__spn3
         bottom: 0
 .burger.active
     transform: rotate(90deg)
 .active .burger
     &__spn1
-        top: calc(50% - 1vw)
+        top: calc(50% - 10%)
         transform: rotate(45deg)
+        background-color: $white
     &__spn2
         opacity: 0
+        background-color: $white
     &__spn3
-        bottom: calc(50% - 1vw)
+        bottom: calc(50% - 10%)
         transform: rotate(-45deg)
+        background-color: $white
+
++burgerMobileHorizontal

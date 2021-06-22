@@ -1,0 +1,94 @@
+@mixin sentenceWord
+    flex-grow: 1
+    flex-basis: 45%
+@mixin sentenceWordHorizontal
+    flex-grow: 1
+    flex-basis: 30%
+    
+=navMobileHorizontal
+    @media (orientation: landscape)
+        .nav
+            height: $nav-height-mobile-horizontal
+            font-size: 3rem
+            &__title
+                line-height: $nav-height-mobile-horizontal
+            &__logo
+                &__img
+                    margin-left: 50%
+        .active .nav
+            &__title
+                margin-left: 2%
+                transform: scale(1.2)
+            
+                 
+=burgerMobileHorizontal
+    @media (orientation: landscape)
+        .burger
+            top: 4vh
+            left: 4vh
+            width: calc(#{$nav-height-mobile-horizontal}/2 + 2vh)
+            height: calc(#{$nav-height-mobile-horizontal}/2)
+=banerMobileHorizontal
+    @media (orientation: landscape)
+        .baner
+            &__img
+                background-image: url("../img/laptop1024landscape.jpg")
+                @keyframes banerMove
+                    0%
+                        margin-top: 0
+                    100%
+                        margin-top: $nav-height-mobile-horizontal
+                        height: $baner-height-mobile-horizontal
+            &__sentence
+                left: 20%
+                top: 40%
+                height: 25vw
+                &__words
+                    &__word1
+                        transform: translateX(-100%)
+                    &__word2
+                        transform: translate(2%, 58%)
+                    &__word3
+                        padding-right: 2%
+                        transform: translateY(-100%)
+                    &__word4
+                        text-align: right
+                        transform: translateY(100%)
+                    &__word5
+                        transform: translate(0, -50%)
+                    &__word6
+                        transform: translateX(100%)
+                    div
+                        @include sentenceWordHorizontal
+                        
+                &__about
+                    span
+                        height: 10vh
+                        width: 10vh
+                        line-height: 10vh
+                        border-radius: 5vh
+                        letter-spacing: 1px
+                    span.active 
+                        animation: about 0.7s .5s ease-out both
+                        @keyframes about
+                            0%
+                                width: 10vh
+                            50%
+                                opacity: 1
+                                font-size: 0
+                                width: 15vh
+                            75%
+                                width: 20vh
+                                opacity: 1
+                                font-size: .8rem 
+                            100%
+                                font-size: 1.6rem
+                                width: 20vw
+                                opacity: 1
+=menuMobileHorizontal
+    @media (orientation: landscape)
+        .menu
+            font-size: 3.5rem
+            &__copy
+                div
+                    margin: auto auto auto 20%
