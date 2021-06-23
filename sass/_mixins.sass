@@ -4,7 +4,15 @@
 @mixin sentenceWordHorizontal
     flex-grow: 1
     flex-basis: 30%
-    
+
+=navTabletPortrait
+    @media (min-width: 768px) and (orientation: portrait)
+        .nav
+            height: $nav-height-tablet
+            font-size: 4rem
+            &__title
+                line-height: $nav-height-tablet
+
 =navMobileHorizontal
     @media (orientation: landscape)
         .nav
@@ -20,7 +28,13 @@
                 margin-left: 2%
                 transform: scale(1.2)
             
-                 
+=burgerTabletPortrait
+    @media (min-width: 768px) and (orientation: portrait) 
+        .burger
+            top: 1.5vh
+            left: 1vh
+            width: calc(#{$nav-height-tablet}/2 + 2vh)
+            height: calc(#{$nav-height-tablet}/2)         
 =burgerMobileHorizontal
     @media (orientation: landscape)
         .burger
@@ -28,6 +42,45 @@
             left: 4vh
             width: calc(#{$nav-height-mobile-horizontal}/2 + 2vh)
             height: calc(#{$nav-height-mobile-horizontal}/2)
+=banerTabletPortrait
+    @media (min-width: 768px) and (orientation: portrait) 
+        .baner
+            &__img
+                @keyframes banerMove
+                    0%
+                        margin-top: 0
+                    100%
+                        margin-top: $nav-height-tablet
+                        height: $baner-height-tablet
+            &__sentence
+                left: 50vw
+                width: 45vw
+                height: 45vw
+                font-size: 4rem
+                &__words 
+                    &__word2
+                        transform: translate(-50%, 82%)
+                &__about
+                    span
+                        height: 3vh
+                        width: 3vh
+                        line-height: 3vh
+                    span.active 
+                        animation: about 0.7s .5s linear both
+                        @keyframes about
+                            0%
+                            50%
+                                opacity: 1
+                            75%
+                                width: 15vh
+                                opacity: 1
+                                border-radius: 3vh
+                                font-size: 0
+                            100%
+                                font-size: 2rem
+                                width: 15vh
+                                opacity: 1
+                                border-radius: 3vh
 =banerMobileHorizontal
     @media (orientation: landscape)
         .baner
@@ -40,8 +93,8 @@
                         margin-top: $nav-height-mobile-horizontal
                         height: $baner-height-mobile-horizontal
             &__sentence
-                left: 20%
-                top: 40vh
+                left: 20vw
+                top: 30vh
                 height: 25vw
                 &__words
                     &__word1
@@ -85,6 +138,13 @@
                                 font-size: 1.6rem
                                 width: 20vw
                                 opacity: 1
+=menuTabletPortrait
+    @media (min-width: 760px) and (orientation: portrait) 
+        .menu
+            font-size: 5rem    
+            &__copy
+                div
+                    margin: auto auto auto 20%                       
 =menuMobileHorizontal
     @media (orientation: landscape)
         .menu
@@ -92,8 +152,24 @@
             &__copy
                 div
                     margin: auto auto auto 20%
+=articleMobileHorizontal
+    @media (orientation: landscape)
+        .article
+            div
+                flex-basis: 60%
+=asideMobileHorizontal
+    @media (orientation: landscape)
+        .aside
+            background-image: url("../img/keyboard1024landscape.jpg")
+            background-size: contain
 =footerMobileHorizontal 
     @media (orientation: landscape)
-        .footer__socials
-            font-size: 2.2rem        
-        
+        .footer
+            &__socials
+                font-size: 2.2rem    
+            &__form
+                flex-basis: 60%    
+            &__copy
+                font-size: 1.6rem
+                text-align: right
+                padding-right: 5vw

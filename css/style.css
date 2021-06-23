@@ -45,6 +45,14 @@ body {
   }
 }
 
+@media (min-width: 760px) and (orientation: portrait) {
+  .wrap.active {
+    -webkit-transform: translate(50%, 3%);
+            transform: translate(50%, 3%);
+    border-radius: 40px;
+  }
+}
+
 .burger {
   position: fixed;
   z-index: 2;
@@ -105,6 +113,15 @@ body {
   background-color: #fff;
 }
 
+@media (min-width: 768px) and (orientation: portrait) {
+  .burger {
+    top: 1.5vh;
+    left: 1vh;
+    width: calc(5vh/2 + 2vh);
+    height: calc(5vh/2);
+  }
+}
+
 @media (orientation: landscape) {
   .burger {
     top: 4vh;
@@ -148,7 +165,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 4%;
+  margin-right: 4vw;
   opacity: 1;
   -webkit-transition: .2s linear;
   transition: .2s linear;
@@ -175,6 +192,16 @@ body {
 
 .active .nav__logo {
   opacity: 0;
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .nav {
+    height: 5vh;
+    font-size: 4rem;
+  }
+  .nav__title {
+    line-height: 5vh;
+  }
 }
 
 @media (orientation: landscape) {
@@ -313,6 +340,15 @@ body {
 .active .menu__copy div p {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+@media (min-width: 760px) and (orientation: portrait) {
+  .menu {
+    font-size: 5rem;
+  }
+  .menu__copy div {
+    margin: auto auto auto 20%;
+  }
 }
 
 @media (orientation: landscape) {
@@ -719,6 +755,84 @@ body {
   }
 }
 
+@media (min-width: 768px) and (orientation: portrait) {
+  @-webkit-keyframes banerMove {
+    0% {
+      margin-top: 0;
+    }
+    100% {
+      margin-top: 5vh;
+      height: calc(100vh - 5vh);
+    }
+  }
+  @keyframes banerMove {
+    0% {
+      margin-top: 0;
+    }
+    100% {
+      margin-top: 5vh;
+      height: calc(100vh - 5vh);
+    }
+  }
+  .baner__sentence {
+    left: 50vw;
+    width: 45vw;
+    height: 45vw;
+    font-size: 4rem;
+  }
+  .baner__sentence__words__word2 {
+    -webkit-transform: translate(-50%, 82%);
+            transform: translate(-50%, 82%);
+  }
+  .baner__sentence__about span {
+    height: 3vh;
+    width: 3vh;
+    line-height: 3vh;
+  }
+  .baner__sentence__about span.active {
+    -webkit-animation: about 0.7s .5s linear both;
+            animation: about 0.7s .5s linear both;
+  }
+  @-webkit-keyframes about {
+    0% {
+    }
+    50% {
+      opacity: 1;
+    }
+    75% {
+      width: 15vh;
+      opacity: 1;
+      border-radius: 3vh;
+      font-size: 0;
+    }
+    100% {
+      font-size: 2rem;
+      width: 15vh;
+      opacity: 1;
+      border-radius: 3vh;
+    }
+  }
+  @keyframes about {
+    0% {
+    }
+    50% {
+      opacity: 1;
+    }
+    75% {
+      width: 15vh;
+      opacity: 1;
+      border-radius: 3vh;
+      font-size: 0;
+    }
+    100% {
+      font-size: 2rem;
+      width: 15vh;
+      opacity: 1;
+      border-radius: 3vh;
+    }
+  }
+}
+
 @media (orientation: landscape) {
   .baner__img {
     background-image: url("../img/laptop1024landscape.jpg");
@@ -742,8 +856,8 @@ body {
     }
   }
   .baner__sentence {
-    left: 20%;
-    top: 40vh;
+    left: 20vw;
+    top: 30vh;
     height: 25vw;
   }
   .baner__sentence__words__word1 {
@@ -878,7 +992,7 @@ body {
 }
 
 .article div img {
-  max-width: 100%;
+  width: 100%;
   margin: 2vh auto;
   border: 2px solid #BFBBB8;
 }
@@ -895,6 +1009,13 @@ body {
 
 .article div:nth-last-child(1) {
   margin-bottom: 40px;
+}
+
+@media (orientation: landscape) {
+  .article div {
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+  }
 }
 
 .aside {
@@ -935,6 +1056,13 @@ body {
 
 .aside__black p {
   margin: 30vh 10% auto;
+}
+
+@media (orientation: landscape) {
+  .aside {
+    background-image: url("../img/keyboard1024landscape.jpg");
+    background-size: contain;
+  }
 }
 
 .footer {
@@ -1061,6 +1189,15 @@ body {
 @media (orientation: landscape) {
   .footer__socials {
     font-size: 2.2rem;
+  }
+  .footer__form {
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+  }
+  .footer__copy {
+    font-size: 1.6rem;
+    text-align: right;
+    padding-right: 5vw;
   }
 }
 /*# sourceMappingURL=style.css.map */
