@@ -1,0 +1,75 @@
+.footer
+    flex-basis: 100%
+    flex-grow: 2
+    width: 100%
+    min-height: 100vh
+    background: rgb(89,87,86)
+    background: radial-gradient(circle, rgba(89,87,86,1) 0%, rgba(0,0,0,1) 100%, rgba(0,0,0,1) 100%)
+    display: flex
+    flex-wrap: wrap
+    &__socials
+        flex-basis: 100%
+        margin-top: 5%
+        font-size: 1.6rem
+        display: flex
+        flex-wrap: wrap
+        align-content: flex-start
+        padding: 5%
+        &__soc1,
+        &__soc2,
+        &__soc3
+            flex-basis: 100%
+            margin: 3%
+            a 
+                text-decoration: none
+                color: White
+                i
+                    margin-right: 5%
+        &__img
+            display: none
+            width: 100%
+            img
+                margin: 10%
+                width: 70%
+                opacity: .7
+    &__form
+        flex-basis: 90%
+        color: white
+        text-align: center
+        margin: 10% auto
+        font-size: 2rem
+        form
+            margin-top: 5%
+            padding: 2%
+            border: 1px solid white
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-around
+            justify-items: space-around
+            div
+                flex-basis: 90%
+                text-align: left
+                input
+                    padding: 5px
+                    width: 90%
+                    margin: 2% auto
+                #description
+                    padding: 5px
+                    display: block
+                    width: 90%
+                    height: 15vh
+                    margin: 2% auto
+                #send
+                    display: block
+                    width: 50%
+                    margin: 20px auto
+                    cursor: pointer
+                    border-radius: 20px
+    &__copy
+        flex-basis: 80%
+        flex-grow: 1
+        color: white
+        font-size: 2.5rem
+        margin: 10px auto
+        text-align: center
++footerMobileHorizontal

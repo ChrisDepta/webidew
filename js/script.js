@@ -7,7 +7,8 @@ const menuAnimation = function(){
     document.querySelector('.menu').classList.toggle('active'); 
     sentenceAnimation();
 };
-
+// Baner sentence animation for window ready and for
+// event click menu with wrap replace
 const sentenceAnimation = function(){
     let words = document.querySelectorAll('.baner__sentence__words div');
     const about = document.querySelector('.baner__sentence__about span');
@@ -19,3 +20,12 @@ const startSentenceAnimation = ()=> {
 }
 window.addEventListener('load', startSentenceAnimation);
 burger.addEventListener('click', menuAnimation);
+
+// Nav add color on background for scroll event
+window.addEventListener('scroll', function (){
+    document.querySelector('.nav').style.backgroundColor = "#f4f5f6";
+    if(this.scrollY === 0) {
+    document.querySelector('.nav').style.backgroundColor = "transparent";
+    }
+    console.log(this.scrollY);
+});

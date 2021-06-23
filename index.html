@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChrisDesign</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -29,7 +30,6 @@
     <div class="wrap">
         <section class="baner">
             <div class="baner__img"></div>
-            <div class="baner__black"></div>
             <div class="baner__sentence">
                 <div class="baner__sentence__words">
                     <div class="baner__sentence__words__word1">I design</div>
@@ -43,11 +43,87 @@
                     <span>ABOUT ME</span>
                 </div>
             </div>
+            <div class="baner__black"></div>
         </section>
-        <article class="article"></article>
-        <aside class="aside"></aside>
-        <section class="projects"></section>
-        <footer class="footer"></footer>
+        <section class="article">
+            <div class="article__mobileFirst">
+                <h1>Mobile First</h1>
+                <img src="img/mobileFirst.jpg" alt="">
+                <p>
+                    Dadurch dass in moment mehr menschen das smartphone und tablets als Laptop nutzen, ist die
+                    Idee entstanden, dass ein internetseite zuerst für mobile Geräte konzipiert werden sollte.
+                    Ich baue die Webseit zuerst für Handys dann Tablet und zum schluss mache Ich richtig dicke desktop design.
+                </p>
+            </div>
+            <div class="article__intuitivesLayout">
+                <h1>Intuitives Website-Layout</h1>
+                <img src="img/layout.jpg" alt="">
+                <p>
+                    Wir wollen alle nicht zu viel zeit verlieran an suchen wo sich dass was mann braucht an desktop befindet. Ein hompage soll so konziepiert werden wie die neuste standarde es determinieren und das nutzung von webseit soll möglich am bequemst sein.
+                </p>
+                <ul>
+                    <li><h3>Intuitive</h3></li>
+                    <li><h3>Modern</h3></li>
+                    <li><h3>Attractive</h3></li>
+                </ul>
+            </div>
+            <div class="article__office">
+                <h1>Deine Wünsche...</h1>
+                <img src="img/office.jpg" alt="">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione itaque nam, ipsam aliquam possimus iusto sapiente nostrum enim! Eos quam maiores numquam ea dignissimos.
+                </p>
+            </div> 
+        </section>
+        <section class="aside">
+            <div class="aside__black">
+            <p>Erfüllen ihnen jeden wunsch auf ihrer website ist meine zweiter Vorname.</p>
+            </div>
+        </section>
+        <!-- <section class="projects"></section> -->
+        <footer class="footer">
+            <div class="footer__socials">
+                <div class="footer__socials__soc1">
+                    <a href=""><i class="fab fa-facebook"></i>ChrisDesign</a>
+                </div>
+                <div class="footer__socials__soc2">
+                    <a href=""><i class="fas fa-mobile-alt"></i>+49 172/ 5378432</a>
+                </div>
+                <div class="footer__socials__soc3">
+                    <a href=""><i class="fas fa-at"></i>christophdepta@gmail.com</a>
+                </div>
+                <div class="footer__socials__img">
+                    <img src="img/logo.png">
+                </div>
+            </div>
+            <div class="footer__form">
+                <h2>kontak formular</h2>
+                <form action="mailto:christophdepta@gmail.com" method="post" enctype="text/plain" autocomplete="off">
+                    <div>
+                        <label for="name">Name und Vorname</label>
+                        <input type="text" name="Name" required>
+                    </div> 
+                     <div>
+                        <label for="phone_number">Ihre Rufnummer</label>
+                        <input type="tel" name="phone_number" required>
+                    </div>
+                    <div>
+                        <label for="email">Ihre e-amil adresse</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="description">Schreiben Sie bitte um was geht's...</label>
+                        <textarea id="description" maxlength="500" rows="3"></textarea>
+                    </div>
+                    <div class="form__btn">
+                        <input type="submit" name="submit" id="send">
+                    </div>
+                </form>
+            </div>
+            <div class="footer__copy">
+                <p>&copy; Christopher Depta - ChrisDesign</p>
+            </div>
+        </footer>
     </div>
 </div>
     <script src="js/script.js"></script>
