@@ -138,6 +138,42 @@
                                 font-size: 1.6rem
                                 width: 20vw
                                 opacity: 1
+=banerTabletLandscape
+    @media (min-width: 768px) and (orientation: landscape)
+        .baner
+            &__img
+                @keyframes banerMove
+                    0%
+                        margin-top: 0
+                    100%
+                        margin-top: $nav-height-tablet-horizontal
+                        height: $baner-height-tablet-horizontal
+            &__sentence
+                &__about
+                    span
+                        height: 4vh
+                        width: 4vh
+                        line-height: 4vh
+                        border-radius: 5vh
+                        letter-spacing: 1px
+                    span.active 
+                        animation: about 0.7s .5s ease-out both
+                        @keyframes about
+                            0%
+                                width: 4vh
+                            50%
+                                opacity: 1
+                                font-size: 0
+                                width: 10vh
+                            75%
+                                width: 15vh
+                                opacity: 1
+                                font-size: .8rem 
+                            100%
+                                font-size: 1.6rem
+                                width: 15vw
+                                opacity: 1
+
 =menuTabletPortrait
     @media (min-width: 760px) and (orientation: portrait) 
         .menu
@@ -152,16 +188,38 @@
             &__copy
                 div
                     margin: auto auto auto 20%
+=articleTabletPortrait
+    @media (min-width: 760px) and (orientation: portrait) 
+        .article
+            div
+                flex-basis: 60%
 =articleMobileHorizontal
     @media (orientation: landscape)
         .article
             div
                 flex-basis: 60%
+=articleTabletLandscape
+    @media (min-width: 760px) and (orientation: landscape)
+        .article
+            div
+                flex-basis: 30% 
 =asideMobileHorizontal
     @media (orientation: landscape)
         .aside
             background-image: url("../img/keyboard1024landscape.jpg")
             background-size: contain
+=footerTabletPortrait
+    @media (min-width: 760px) and (orientation: portrait)
+        .footer
+            min-height: 50vh
+            &__socials
+                margin-top: 12vh
+                flex-basis: 40%
+                &__img
+                    margin-top: 14vh
+                    display: block
+            &__form
+                flex-basis: 40%       
 =footerMobileHorizontal 
     @media (orientation: landscape)
         .footer
@@ -173,3 +231,18 @@
                 font-size: 1.6rem
                 text-align: right
                 padding-right: 5vw
+=footerTabletLandscape
+    @media (min-width: 760px) and (orientation: landscape)
+        .footer
+            min-height: 50vh
+            &__socials
+                margin-top: 12vh
+                flex-basis: 40%
+                &__img
+                    margin-top: 5vh
+                    display: block
+            &__form
+                flex-basis: 40% 
+            &__copy
+                text-align: center 
+                font-size: 2.5rem
