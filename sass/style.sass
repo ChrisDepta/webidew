@@ -27,14 +27,19 @@ body
     
 .wrap.active
     transform: translate(100%, 1%)
-@media (orientation: landscape)
-    .wrap.active
-        transform: translate(60%,3%)
-        border-radius: 40px
 @media (min-width: 760px) and (orientation: portrait) 
     .wrap.active
         transform: translate(50%,3%)
         border-radius: 40px
+@media (orientation: landscape)
+    .wrap.active
+        transform: translate(60%,3%)
+        border-radius: 40px
+@media (min-width: 768px) and (orientation: landscape) 
+    .wrap.active
+        transform: translate(40%, 3%)
+
+
 
 @import 'burger'
 @import 'nav'  

@@ -37,6 +37,14 @@ body {
           transform: translate(100%, 1%);
 }
 
+@media (min-width: 760px) and (orientation: portrait) {
+  .wrap.active {
+    -webkit-transform: translate(50%, 3%);
+            transform: translate(50%, 3%);
+    border-radius: 40px;
+  }
+}
+
 @media (orientation: landscape) {
   .wrap.active {
     -webkit-transform: translate(60%, 3%);
@@ -45,11 +53,10 @@ body {
   }
 }
 
-@media (min-width: 760px) and (orientation: portrait) {
+@media (min-width: 768px) and (orientation: landscape) {
   .wrap.active {
-    -webkit-transform: translate(50%, 3%);
-            transform: translate(50%, 3%);
-    border-radius: 40px;
+    -webkit-transform: translate(40%, 3%);
+            transform: translate(40%, 3%);
   }
 }
 
@@ -131,6 +138,15 @@ body {
   }
 }
 
+@media (min-width: 768px) and (orientation: landscape) {
+  .burger {
+    top: 2vh;
+    left: 2vh;
+    width: calc(8vh/2 + 2vh);
+    height: calc(8vh/2);
+  }
+}
+
 .nav {
   position: fixed;
   z-index: 1;
@@ -155,6 +171,8 @@ body {
   text-align: center;
   margin-left: 10vh;
   line-height: 10vh;
+  -webkit-transform: translate();
+          transform: translate();
   -webkit-transition: .4s linear;
   transition: .4s linear;
 }
@@ -186,8 +204,8 @@ body {
 .active .nav__title {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
-  margin-top: 4%;
-  margin-left: 40%;
+  margin-top: 4vh;
+  margin-left: 40vw;
 }
 
 .active .nav__logo {
@@ -201,6 +219,11 @@ body {
   }
   .nav__title {
     line-height: 5vh;
+  }
+  .active .nav__title {
+    margin-left: 0;
+    -webkit-transform: translate(-20%, 5vh) scale(1.5);
+            transform: translate(-20%, 5vh) scale(1.5);
   }
 }
 
@@ -219,6 +242,20 @@ body {
     margin-left: 2%;
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
+  }
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+  .nav {
+    height: 8vh;
+  }
+  .nav__title {
+    line-height: 8vh;
+  }
+  .active .nav__title {
+    margin-left: 0;
+    -webkit-transform: translate(-20%, 7vh) scale(1.5);
+            transform: translate(-20%, 7vh) scale(1.5);
   }
 }
 
@@ -357,6 +394,12 @@ body {
   }
   .menu__copy div {
     margin: auto auto auto 20%;
+  }
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+  .menu {
+    font-size: 5.5rem;
   }
 }
 
@@ -775,19 +818,27 @@ body {
     }
   }
   .baner__sentence {
-    left: 50vw;
-    width: 45vw;
-    height: 45vw;
-    font-size: 4rem;
+    left: 40vw;
+    width: 55vw;
+    height: 55vw;
+    font-size: 6rem;
   }
   .baner__sentence__words__word2 {
-    -webkit-transform: translate(-50%, 82%);
-            transform: translate(-50%, 82%);
+    -webkit-transform: translate(-50%, 111%);
+            transform: translate(-50%, 111%);
+  }
+  .baner__sentence__words__word3 {
+    font-size: 7rem;
+    text-align: left;
+  }
+  .baner__sentence__words__word4 {
+    font-size: 9rem;
+    text-align: center;
   }
   .baner__sentence__about span {
-    height: 3vh;
-    width: 3vh;
-    line-height: 3vh;
+    height: 4vh;
+    width: 4vh;
+    line-height: 4vh;
   }
   .baner__sentence__about span.active {
     -webkit-animation: about 0.7s .5s linear both;
@@ -965,10 +1016,25 @@ body {
       height: calc(100vh - 8vh);
     }
   }
+  .baner__sentence {
+    left: 17vw;
+    height: 35vw;
+    font-size: 7rem;
+  }
+  .baner__sentence__words__word2 {
+    -webkit-transform: translate(2%, 62%);
+            transform: translate(2%, 62%);
+  }
+  .baner__sentence__words__word3 {
+    font-size: 9rem;
+  }
+  .baner__sentence__words__word4 {
+    font-size: 10rem;
+  }
   .baner__sentence__about span {
-    height: 4vh;
-    width: 4vh;
-    line-height: 4vh;
+    height: 6vh;
+    width: 6vh;
+    line-height: 6vh;
     border-radius: 5vh;
     letter-spacing: 1px;
   }
@@ -978,7 +1044,7 @@ body {
   }
   @-webkit-keyframes about {
     0% {
-      width: 4vh;
+      width: 6vh;
     }
     50% {
       opacity: 1;
@@ -988,17 +1054,17 @@ body {
     75% {
       width: 15vh;
       opacity: 1;
-      font-size: .8rem;
+      font-size: 1rem;
     }
     100% {
-      font-size: 1.6rem;
+      font-size: 2rem;
       width: 15vw;
       opacity: 1;
     }
   }
   @keyframes about {
     0% {
-      width: 4vh;
+      width: 6vh;
     }
     50% {
       opacity: 1;
@@ -1008,10 +1074,10 @@ body {
     75% {
       width: 15vh;
       opacity: 1;
-      font-size: .8rem;
+      font-size: 1rem;
     }
     100% {
-      font-size: 1.6rem;
+      font-size: 2rem;
       width: 15vw;
       opacity: 1;
     }
