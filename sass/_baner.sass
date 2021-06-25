@@ -128,6 +128,8 @@
                 text-transform: uppercase
         &__about
             span.active
+                transform: scale(1)
+                transition: .5s
                 animation: about 0.7s .5s linear both
                 @keyframes about
                     0%
@@ -143,6 +145,11 @@
                         width: 25vh
                         opacity: 1
                         border-radius: 3vh
+            span.active:hover
+                background-color: $black
+                color: $white
+                transform: scale(1.1)
+                font-size: 3rem
     &__black
         position: absolute
         top: 0
@@ -157,10 +164,13 @@
                 opacity: 1  
             40%
                 opacity: 1
-            80%
+            99%
                 opacity: 0
+                height: 100vh
             100%
                 opacity: 0
+                height: 0
 +banerTabletPortrait
 +banerMobileHorizontal 
 +banerTabletLandscape
++banerDesktop

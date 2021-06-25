@@ -6,7 +6,7 @@
     flex-basis: 30%
 
 =navTabletPortrait
-    @media (min-width: 768px) and (orientation: portrait)
+    @media screen and  (min-width: 768px) and (orientation: portrait)
         .nav
             height: $nav-height-tablet
             font-size: 4rem
@@ -17,7 +17,7 @@
             transform: translate(-20%, 5vh) scale(1.5)
 
 =navMobileHorizontal
-    @media (orientation: landscape)
+    @media screen and (orientation: landscape)
         .nav
             height: $nav-height-mobile-horizontal
             font-size: 3rem
@@ -31,7 +31,7 @@
                 margin-left: 2%
                 transform: scale(1.2)
 =navTabletLandscape
-    @media (min-width: 768px) and (orientation: landscape)   
+    @media screen and (min-width: 768px) and (orientation: landscape)   
         .nav
             height: $nav-height-tablet-horizontal   
             &__title
@@ -39,31 +39,41 @@
         .active .nav__title
             margin-left: 0
             transform: translate(-20%, 7vh) scale(1.5)
+    @media screen and (min-width: 1024px)
+        .nav
+            font-size: 4rem
+        .active .nav__title
+            transform: translate(-30%, 7vh) scale(1.5)
+    @media screen and (min-width: 1280px)
+        .nav
+            font-size: 5rem
+        
 =burgerTabletPortrait
-    @media (min-width: 768px) and (orientation: portrait) 
+    @media screen and (min-width: 768px) and (orientation: portrait) 
         .burger
             top: 1.5vh
             left: 1vh
             width: calc(#{$nav-height-tablet}/2 + 2vh)
             height: calc(#{$nav-height-tablet}/2)         
 =burgerMobileHorizontal
-    @media (orientation: landscape)
+    @media screen and (orientation: landscape)
         .burger
-            top: 4vh
-            left: 4vh
+            top: 2vh
+            left: 2vh
             width: calc(#{$nav-height-mobile-horizontal}/2 + 2vh)
             height: calc(#{$nav-height-mobile-horizontal}/2)
 =burgerTabletLandscape
-    @media (min-width: 768px) and (orientation: landscape)
+    @media screen and (min-width: 768px) and (orientation: landscape)
         .burger
             top: 2vh
             left: 2vh
             width: calc(#{$nav-height-tablet-horizontal}/2 + 2vh)
             height: calc(#{$nav-height-tablet-horizontal}/2)
 =banerTabletPortrait
-    @media (min-width: 768px) and (orientation: portrait) 
+    @media screen and (min-width: 768px) and (orientation: portrait) 
         .baner
             &__img
+                background-image: url("../img/laptop1000portrait.jpg")
                 @keyframes banerMove
                     0%
                         margin-top: 0
@@ -77,7 +87,7 @@
                 font-size: 6rem
                 &__words 
                     &__word2
-                        transform: translate(-50%, 111%)
+                        transform: translate(-50%, 110%)
                     &__word3
                         font-size: 7rem
                         text-align: left
@@ -106,7 +116,7 @@
                                 opacity: 1
                                 border-radius: 3vh
 =banerMobileHorizontal
-    @media (orientation: landscape)
+    @media screen and (orientation: landscape)
         .baner
             &__img
                 background-image: url("../img/laptop1024landscape.jpg")
@@ -140,9 +150,9 @@
                         
                 &__about
                     span
-                        height: 10vh
-                        width: 10vh
-                        line-height: 10vh
+                        height: 3rem
+                        width: 3rem
+                        line-height: 3rem
                         border-radius: 5vh
                         letter-spacing: 1px
                     span.active 
@@ -163,7 +173,7 @@
                                 width: 20vw
                                 opacity: 1
 =banerTabletLandscape
-    @media (min-width: 768px) and (orientation: landscape)
+    @media screen and (min-width: 768px) and (orientation: landscape)
         .baner
             &__img
                 @keyframes banerMove
@@ -173,16 +183,17 @@
                         margin-top: $nav-height-tablet-horizontal
                         height: $baner-height-tablet-horizontal
             &__sentence
+                top: 25vh
                 left: 17vw
-                height: 35vw
-                font-size: 7rem
+                height: 30vw
+                font-size: 4rem
                 &__words
                     &__word2
                         transform: translate(2%, 62%)
                     &__word3
-                        font-size: 9rem
+                        font-size: 5rem
                     &__word4
-                        font-size: 10rem
+                        font-size: 6rem
                 &__about
                     span
                         height: 6vh
@@ -207,48 +218,100 @@
                                 font-size: 2rem
                                 width: 15vw
                                 opacity: 1
-
+=banerDesktop
+    @media screen and (min-width: 1024px)
+        .baner
+            &__img
+                 background-image: url("../img/laptop1920landscape.jpg")
+            &__sentence
+                top: 30vh
+                left: 30vw
+                height: 30vw
+                width: 65vw
+                font-size: 6rem
+                &__words
+                    &__word2
+                        transform: translate(0, 59%)
+                    &__word3
+                        font-size: 7rem
+                    &__word4
+                        font-size: 8rem
+    @media screen and (min-width: 1280px)
+        .baner
+            &__sentence
+                top: 40vh
+                height: 40vh
+                font-size: 10rem
+                &__words
+                    &__word2
+                        transform: translate(0, 60%)
+                    &__word3
+                        font-size: 11rem
+                    &__word4
+                        font-size: 12rem
 =menuTabletPortrait
-    @media (min-width: 760px) and (orientation: portrait) 
+    @media screen and (min-width: 768px) and (orientation: portrait) 
         .menu
+            width: 50vw
             font-size: 5rem    
             &__copy
                 div
                     margin: auto auto auto 20%                       
 =menuMobileHorizontal
-    @media (orientation: landscape)
+    @media screen and (orientation: landscape)
         .menu
+            width: 60vw
             font-size: 3.5rem
             &__copy
                 div
                     margin: auto auto auto 20%
 =menuTabletLandscape
-    @media (min-width: 768px) and (orientation: landscape)
+    @media screen and (min-width: 768px) and (orientation: landscape)
         .menu
-            font-size: 5.5rem
-= 
+            width: 40vw 
+            font-size: 5.5rem 
+            font-weight: lighter
+    @media screen and (min-width: 1024px)
+        .menu
+            width: 30vw
+            font-size: 7rem
 =articleTabletPortrait
-    @media (min-width: 760px) and (orientation: portrait) 
+    @media screen and (min-width: 768px) and (orientation: portrait) 
         .article
             div
-                flex-basis: 60%
+                flex-basis: 40%
 =articleMobileHorizontal
-    @media (orientation: landscape)
+    @media screen and (orientation: landscape)
         .article
             div
                 flex-basis: 60%
 =articleTabletLandscape
-    @media (min-width: 760px) and (orientation: landscape)
+    @media screen and (min-width: 768px) and (orientation: landscape)
         .article
             div
-                flex-basis: 30% 
+                flex-basis: 40% 
+=articleDesktop
+    @media screen and (min-width: 1024px)
+        .article
+            div
+                flex-basis: 30%
+                margin-bottom: 40px
+           
+    @media screen and (min-width: 1280px)
+        .article
+            max-width: 1600px
+            div
+                flex-basis: 26%
 =asideMobileHorizontal
-    @media (orientation: landscape)
+    @media screen and (orientation: landscape)
         .aside
             background-image: url("../img/keyboard1024landscape.jpg")
-            background-size: contain
-=footerTabletPortrait
-    @media (min-width: 760px) and (orientation: portrait)
+            background-size: cover
+    @media screen and (orientation: landscape) and (min-width: 1024px)
+        .aside
+            background-image: url("../img/keyboard1920landscape.jpg")
+=footerPortrait
+    @media screen and (min-width: 768px) and (orientation: portrait)
         .footer
             min-height: 50vh
             &__socials
@@ -259,8 +322,8 @@
                     display: block
             &__form
                 flex-basis: 40%       
-=footerMobileHorizontal 
-    @media (orientation: landscape)
+=footerLandscape 
+    @media screen and (orientation: landscape)
         .footer
             &__socials
                 font-size: 2.2rem    
@@ -270,8 +333,7 @@
                 font-size: 1.6rem
                 text-align: right
                 padding-right: 5vw
-=footerTabletLandscape
-    @media (min-width: 760px) and (orientation: landscape)
+    @media screen and (min-width: 768px) and (orientation: landscape)
         .footer
             min-height: 50vh
             &__socials

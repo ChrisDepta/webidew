@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,100;0,400;0,700;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   background-color: #000;
   font-family: "Lato", sans-serif;
@@ -7,10 +14,7 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  max-width: 1920px;
 }
 
 .sideWrap {
@@ -30,6 +34,9 @@ body {
           transform: translate(0, 0);
   -webkit-transition: .6s linear;
   transition: .6s linear;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .wrap.active {
@@ -37,7 +44,7 @@ body {
           transform: translate(100%, 1%);
 }
 
-@media (min-width: 760px) and (orientation: portrait) {
+@media screen and (min-width: 760px) and (orientation: portrait) {
   .wrap.active {
     -webkit-transform: translate(50%, 3%);
             transform: translate(50%, 3%);
@@ -45,7 +52,7 @@ body {
   }
 }
 
-@media (orientation: landscape) {
+@media screen and (orientation: landscape) {
   .wrap.active {
     -webkit-transform: translate(60%, 3%);
             transform: translate(60%, 3%);
@@ -53,10 +60,17 @@ body {
   }
 }
 
-@media (min-width: 768px) and (orientation: landscape) {
+@media screen and (min-width: 768px) and (orientation: landscape) {
   .wrap.active {
     -webkit-transform: translate(40%, 3%);
             transform: translate(40%, 3%);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .wrap.active {
+    -webkit-transform: translate(30%, 3%);
+            transform: translate(30%, 3%);
   }
 }
 
@@ -120,7 +134,7 @@ body {
   background-color: #fff;
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media screen and (min-width: 768px) and (orientation: portrait) {
   .burger {
     top: 1.5vh;
     left: 1vh;
@@ -129,16 +143,16 @@ body {
   }
 }
 
-@media (orientation: landscape) {
+@media screen and (orientation: landscape) {
   .burger {
-    top: 4vh;
-    left: 4vh;
-    width: calc(20vh/2 + 2vh);
-    height: calc(20vh/2);
+    top: 2vh;
+    left: 2vh;
+    width: calc(10vh/2 + 2vh);
+    height: calc(10vh/2);
   }
 }
 
-@media (min-width: 768px) and (orientation: landscape) {
+@media screen and (min-width: 768px) and (orientation: landscape) {
   .burger {
     top: 2vh;
     left: 2vh;
@@ -212,7 +226,7 @@ body {
   opacity: 0;
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media screen and (min-width: 768px) and (orientation: portrait) {
   .nav {
     height: 5vh;
     font-size: 4rem;
@@ -227,13 +241,13 @@ body {
   }
 }
 
-@media (orientation: landscape) {
+@media screen and (orientation: landscape) {
   .nav {
-    height: 20vh;
+    height: 10vh;
     font-size: 3rem;
   }
   .nav__title {
-    line-height: 20vh;
+    line-height: 10vh;
   }
   .nav__logo__img {
     margin-left: 50%;
@@ -245,7 +259,7 @@ body {
   }
 }
 
-@media (min-width: 768px) and (orientation: landscape) {
+@media screen and (min-width: 768px) and (orientation: landscape) {
   .nav {
     height: 8vh;
   }
@@ -259,13 +273,29 @@ body {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .nav {
+    font-size: 4rem;
+  }
+  .active .nav__title {
+    -webkit-transform: translate(-30%, 7vh) scale(1.5);
+            transform: translate(-30%, 7vh) scale(1.5);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .nav {
+    font-size: 5rem;
+  }
+}
+
 .menu {
   position: fixed;
   top: 30%;
   left: 0;
   right: 0;
   height: 70%;
-  width: 100%;
+  width: 100vw;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   font-family: "Cabin", sans-serif;
@@ -299,6 +329,7 @@ body {
           transform: translateY(100%);
   -webkit-transition: .7s 0.6s ease-out;
   transition: .7s 0.6s ease-out;
+  text-align: left;
 }
 
 .menu__list div li a {
@@ -379,8 +410,9 @@ body {
           transform: translateY(0);
 }
 
-@media (min-width: 760px) and (orientation: portrait) {
+@media screen and (min-width: 768px) and (orientation: portrait) {
   .menu {
+    width: 50vw;
     font-size: 5rem;
   }
   .menu__copy div {
@@ -388,8 +420,9 @@ body {
   }
 }
 
-@media (orientation: landscape) {
+@media screen and (orientation: landscape) {
   .menu {
+    width: 60vw;
     font-size: 3.5rem;
   }
   .menu__copy div {
@@ -397,9 +430,18 @@ body {
   }
 }
 
-@media (min-width: 768px) and (orientation: landscape) {
+@media screen and (min-width: 768px) and (orientation: landscape) {
   .menu {
+    width: 40vw;
     font-size: 5.5rem;
+    font-weight: lighter;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menu {
+    width: 30vw;
+    font-size: 7rem;
   }
 }
 
@@ -712,6 +754,10 @@ body {
 }
 
 .baner__sentence__about span.active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: .5s;
+  transition: .5s;
   -webkit-animation: about 0.7s .5s linear both;
           animation: about 0.7s .5s linear both;
 }
@@ -756,6 +802,14 @@ body {
   }
 }
 
+.baner__sentence__about span.active:hover {
+  background-color: #000;
+  color: #fff;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  font-size: 3rem;
+}
+
 .baner__black {
   position: absolute;
   top: 0;
@@ -775,11 +829,13 @@ body {
   40% {
     opacity: 1;
   }
-  80% {
+  99% {
     opacity: 0;
+    height: 100vh;
   }
   100% {
     opacity: 0;
+    height: 0;
   }
 }
 
@@ -790,15 +846,20 @@ body {
   40% {
     opacity: 1;
   }
-  80% {
+  99% {
     opacity: 0;
+    height: 100vh;
   }
   100% {
     opacity: 0;
+    height: 0;
   }
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media screen and (min-width: 768px) and (orientation: portrait) {
+  .baner__img {
+    background-image: url("../img/laptop1000portrait.jpg");
+  }
   @-webkit-keyframes banerMove {
     0% {
       margin-top: 0;
@@ -824,8 +885,8 @@ body {
     font-size: 6rem;
   }
   .baner__sentence__words__word2 {
-    -webkit-transform: translate(-50%, 111%);
-            transform: translate(-50%, 111%);
+    -webkit-transform: translate(-50%, 110%);
+            transform: translate(-50%, 110%);
   }
   .baner__sentence__words__word3 {
     font-size: 7rem;
@@ -884,7 +945,7 @@ body {
   }
 }
 
-@media (orientation: landscape) {
+@media screen and (orientation: landscape) {
   .baner__img {
     background-image: url("../img/laptop1024landscape.jpg");
   }
@@ -893,8 +954,8 @@ body {
       margin-top: 0;
     }
     100% {
-      margin-top: 20vh;
-      height: calc(100vh - 20vh);
+      margin-top: 10vh;
+      height: calc(100vh - 10vh);
     }
   }
   @keyframes banerMove {
@@ -902,8 +963,8 @@ body {
       margin-top: 0;
     }
     100% {
-      margin-top: 20vh;
-      height: calc(100vh - 20vh);
+      margin-top: 10vh;
+      height: calc(100vh - 10vh);
     }
   }
   .baner__sentence {
@@ -945,9 +1006,9 @@ body {
         flex-basis: 30%;
   }
   .baner__sentence__about span {
-    height: 10vh;
-    width: 10vh;
-    line-height: 10vh;
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
     border-radius: 5vh;
     letter-spacing: 1px;
   }
@@ -997,7 +1058,7 @@ body {
   }
 }
 
-@media (min-width: 768px) and (orientation: landscape) {
+@media screen and (min-width: 768px) and (orientation: landscape) {
   @-webkit-keyframes banerMove {
     0% {
       margin-top: 0;
@@ -1017,19 +1078,20 @@ body {
     }
   }
   .baner__sentence {
+    top: 25vh;
     left: 17vw;
-    height: 35vw;
-    font-size: 7rem;
+    height: 30vw;
+    font-size: 4rem;
   }
   .baner__sentence__words__word2 {
     -webkit-transform: translate(2%, 62%);
             transform: translate(2%, 62%);
   }
   .baner__sentence__words__word3 {
-    font-size: 9rem;
+    font-size: 5rem;
   }
   .baner__sentence__words__word4 {
-    font-size: 10rem;
+    font-size: 6rem;
   }
   .baner__sentence__about span {
     height: 6vh;
@@ -1084,6 +1146,47 @@ body {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .baner__img {
+    background-image: url("../img/laptop1920landscape.jpg");
+  }
+  .baner__sentence {
+    top: 30vh;
+    left: 30vw;
+    height: 30vw;
+    width: 65vw;
+    font-size: 6rem;
+  }
+  .baner__sentence__words__word2 {
+    -webkit-transform: translate(0, 59%);
+            transform: translate(0, 59%);
+  }
+  .baner__sentence__words__word3 {
+    font-size: 7rem;
+  }
+  .baner__sentence__words__word4 {
+    font-size: 8rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .baner__sentence {
+    top: 40vh;
+    height: 40vh;
+    font-size: 10rem;
+  }
+  .baner__sentence__words__word2 {
+    -webkit-transform: translate(0, 60%);
+            transform: translate(0, 60%);
+  }
+  .baner__sentence__words__word3 {
+    font-size: 11rem;
+  }
+  .baner__sentence__words__word4 {
+    font-size: 12rem;
+  }
+}
+
 .article {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -1100,6 +1203,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
 }
 
 .article div {
@@ -1149,24 +1254,42 @@ body {
   margin-bottom: 40px;
 }
 
-@media (min-width: 760px) and (orientation: portrait) {
+@media screen and (min-width: 768px) and (orientation: portrait) {
+  .article div {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
+}
+
+@media screen and (orientation: landscape) {
   .article div {
     -ms-flex-preferred-size: 60%;
         flex-basis: 60%;
   }
 }
 
-@media (orientation: landscape) {
+@media screen and (min-width: 768px) and (orientation: landscape) {
   .article div {
-    -ms-flex-preferred-size: 60%;
-        flex-basis: 60%;
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
   }
 }
 
-@media (min-width: 760px) and (orientation: landscape) {
+@media screen and (min-width: 1024px) {
   .article div {
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .article {
+    max-width: 1600px;
+  }
+  .article div {
+    -ms-flex-preferred-size: 26%;
+        flex-basis: 26%;
   }
 }
 
@@ -1210,19 +1333,25 @@ body {
   margin: 30vh 10% auto;
 }
 
-@media (orientation: landscape) {
+@media screen and (orientation: landscape) {
   .aside {
     background-image: url("../img/keyboard1024landscape.jpg");
-    background-size: contain;
+    background-size: cover;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 1024px) {
+  .aside {
+    background-image: url("../img/keyboard1920landscape.jpg");
   }
 }
 
 .footer {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   width: 100%;
   min-height: 100vh;
   background: #595756;
@@ -1244,12 +1373,11 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
   padding: 5%;
 }
 
 .footer__socials__soc1, .footer__socials__soc2, .footer__socials__soc3 {
+  text-align: left;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   margin: 3%;
@@ -1272,7 +1400,7 @@ body {
 .footer__socials__img img {
   margin: 10%;
   width: 70%;
-  opacity: .7;
+  opacity: .1;
 }
 
 .footer__form {
@@ -1306,21 +1434,21 @@ body {
 
 .footer__form form div input {
   padding: 5px;
-  width: 90%;
+  width: 100%;
   margin: 2% auto;
 }
 
 .footer__form form div #description {
   padding: 5px;
   display: block;
-  width: 90%;
+  width: 100%;
   height: 15vh;
   margin: 2% auto;
 }
 
 .footer__form form div #send {
   display: block;
-  width: 50%;
+  width: 35%;
   margin: 20px auto;
   cursor: pointer;
   border-radius: 20px;
@@ -1338,7 +1466,7 @@ body {
   text-align: center;
 }
 
-@media (min-width: 760px) and (orientation: portrait) {
+@media screen and (min-width: 768px) and (orientation: portrait) {
   .footer {
     min-height: 50vh;
   }
@@ -1357,7 +1485,7 @@ body {
   }
 }
 
-@media (orientation: landscape) {
+@media screen and (orientation: landscape) {
   .footer__socials {
     font-size: 2.2rem;
   }
@@ -1372,7 +1500,7 @@ body {
   }
 }
 
-@media (min-width: 760px) and (orientation: landscape) {
+@media screen and (min-width: 768px) and (orientation: landscape) {
   .footer {
     min-height: 50vh;
   }
