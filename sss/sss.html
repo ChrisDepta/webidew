@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Gra papier kamień nożyczki</title>
+</head>
+
+<body>
+    <div class="wrap">
+    <h1>SCHNICK SCHNACK SCHNUCK"</h1>
+    <div class="panel-left">
+    <div class="panel-left-top">
+        <h4>Spiel Verlauf:</h4>
+        <p>Dein Wahl: <span class="your-choice"></span></p>
+        <p>Komputer Wahl: <span class="ai-choice"></span></p>
+        <h2>Gewinner: </br><span class="who-win">- - - - - - - - - -</span></h2>
+    </div>
+
+    <div class="panel-left-bottom">
+        <h4>Statistik:</h4>
+        <p class="numbers">Spiele: <span>0</span></p>
+        <p class="wins">Gewonnen: <span>0</span></p>
+        <p class="losses">Verloren: <span>0</span></p>
+        <p class="draws">Unentschieden: <span>0</span></p>
+    </div>
+    </div>
+    <div class="select">
+
+        <h3>Wähle eine Geste!:</h3>
+
+        <img data-option="papier" class="first" src="papier.jpg" alt="" title="Papier">
+
+        <img data-option="stein" src="stein.jpg" alt="" title="Stein">
+
+        <img data-option="schere" src="schere.jpg" alt="" title="Schere">
+
+        <button class="start">Los!</button>
+
+    </div>
+</div>
+    
+
+    
+
+    <script src="game.js"></script>
+</body>
+
+</html>

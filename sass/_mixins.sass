@@ -223,6 +223,17 @@
         .baner
             &__img
                  background-image: url("../img/laptop1920landscape.jpg")
+                 @keyframes banerMove
+                    0%
+                        margin-top: 0
+                        border-radius: 0
+                    75%
+                        border-radius: 20px
+                    100%
+                        margin: $nav-height-tablet-horizontal 2vw 2vw
+                        height: calc(#{$baner-height-tablet-horizontal} - 2vw)
+                        width: 96vw
+                        border-radius: 20px
             &__sentence
                 top: 30vh
                 left: 30vw
@@ -310,6 +321,10 @@
     @media screen and (orientation: landscape) and (min-width: 1024px)
         .aside
             background-image: url("../img/keyboard1920landscape.jpg")
+            &__black
+                font-size: 8rem
+                p
+                    margin-top: 40vh
 =footerPortrait
     @media screen and (min-width: 768px) and (orientation: portrait)
         .footer
