@@ -1,5 +1,6 @@
 const images = [...document.querySelectorAll('img')];
 const btnLos = document.querySelector('.start');
+
 let humanImg = ""; 
 let aiImg = "";
 const gameSummary = {
